@@ -14,14 +14,15 @@ let res = {
     "Rugby": {name: "Rugby", numOfPlayers:30, ball: true, equipment: ['boots', 'ball', 'goals'], img:'https://goravens.ca/wp-content/uploads/banner-rugby-1.jpg'},
     "Formula One": {name: "Formula One", numOfPlayers:20, ball: false, equipment: ['car', 'helmate', 'driving shoes', 'driving gloves', 'driving suit'], img:'https://britgamer.s3.eu-west-1.amazonaws.com/styles/full_width_image/s3/2020-04/f1-2020-banner.jpg?itok=MnGpThle'},
 }
-
+console.log(res, 'res is')
 for(let key in res){
     console.log(key)
 // first thing is create the elements
+    let card = document.createElement('div');
     let banner = document.createElement('img');
     let newTitle = document.createElement('h1');
     let equipment = document.createElement('p');
-    let card = document.createElement('div');
+    
 //second set any attributes (not always needed)
     card.setAttribute('class', 'card');
 // third add content(src) to element (img, text, numbers, etc..)
@@ -38,4 +39,4 @@ for(let key in res){
     body.appendChild(card);
    }
 }
-console.log(getReq())
+getReq()
